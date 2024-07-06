@@ -2,7 +2,7 @@ package access_modifiers;
 
 import access_modifiers.TestClass1;
 
-public final class TestClass2 extends TestClass1
+final class TestClass2 
 {
 	
 	

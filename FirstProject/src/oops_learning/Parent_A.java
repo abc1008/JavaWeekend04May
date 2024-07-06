@@ -21,6 +21,11 @@ public class Parent_A
 	}
 
 	
+	private void test()
+	{
+		System.out.println("private method of Parent_A");
+	}
+	
 	public static void main(String[] args)
 	{
 		

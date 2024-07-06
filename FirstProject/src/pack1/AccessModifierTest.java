@@ -7,6 +7,13 @@ public class AccessModifierTest
 	public static void main(String[] args)
 	{
 		TestClass1 tc1 = new TestClass1();
+		tc1.m1();
+		
+//		tc1.m2();
+		
+//		tc1.m4();
+		
+		
 	}
 
 }
