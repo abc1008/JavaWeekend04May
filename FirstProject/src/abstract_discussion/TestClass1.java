@@ -2,6 +2,9 @@ package abstract_discussion;
 
 public abstract class TestClass1
 {
+	int var1 = 100;  
+	static int var2 = 200;
+	
 	
 	public TestClass1()
 	{

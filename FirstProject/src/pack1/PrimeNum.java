@@ -26,15 +26,12 @@ public class PrimeNum
 				factorCount++;
 			}
 		}
-		
 		if(factorCount == 2)
 		{
-//			System.out.println("Prime");
 			return true;
 		}
 		else
 		{
-//			System.out.println("Not Prime");
 			return false;
 		}
 	}
