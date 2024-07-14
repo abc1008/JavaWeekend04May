@@ -2,12 +2,7 @@ package interface_discussion;
 
 public interface Interface1
 {
-	
 	int var1 = 100;   // public, static and final
-	
-	
-	// 100% abstract
-	
 	
 	void m1();   // by default public abstract
 
