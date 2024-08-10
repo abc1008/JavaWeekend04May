@@ -10,9 +10,17 @@ public class Class1
 	
 	public double getBalance()
 	{
-		
 		return accBalance;
+	}
+	
+	public boolean setBalance(int balance)
+	{
+		accBalance = balance;
 		
+		if(accBalance == balance )
+			return true;
+		else
+			return false;
 	}
 	
 	

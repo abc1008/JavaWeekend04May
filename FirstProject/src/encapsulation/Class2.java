@@ -9,6 +9,9 @@ public class Class2
 		double balance = c1.getBalance();
 		
 		System.out.println(balance);
+		
+		boolean isBalanceSet = c1.setBalance(6000);
+		System.out.println(isBalanceSet);
 	}
 
 }
