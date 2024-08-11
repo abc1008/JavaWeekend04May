@@ -17,6 +17,8 @@ public class Login
 		Thread.sleep(2000);
 		
 		
+//		driver.findElement(By.partialLinkText("Regist")).click();
+		
 		WebElement userId = driver.findElement(By.id("input-email"));  // locate WebElement
 		userId.sendKeys("ag89111@gmail.com");       // perform operation
 		
@@ -24,8 +26,8 @@ public class Login
 		driver.findElement(By.name("password")).sendKeys("Login@123");
 //		 password.sendKeys("Login@123");
 		  
-		Thread.sleep(2000);
-		 driver.findElement(By.xpath("//input[@value='Login']")).click();
+		Thread.sleep(2000); // click on login button
+		 driver.findElement(By.xpath("//input[contains(@class,'btn-primary')]")).click();
 		 
 		 
 		 
@@ -33,7 +35,7 @@ public class Login
 		 driver.findElement(By.xpath("//span[text()='My Account']")).click();
 		 
 		 Thread.sleep(2000);
-		 driver.findElement(By.linkText("Logout")).click();
+		 driver.findElement(By.xpath("(//a[text()='Logout'])[1]")).click();   // logout click 
 		
 	}
 
