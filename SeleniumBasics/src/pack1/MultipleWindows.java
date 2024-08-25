@@ -1,5 +1,6 @@
 package pack1;
 
+import java.util.ArrayList;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -21,20 +22,31 @@ public class MultipleWindows
 		System.out.println("mainWindow : " + mainWindow);
 
 		driver.findElement(By.linkText("OrangeHRM, Inc")).click();
+		driver.findElement(By.linkText("OrangeHRM, Inc")).click();
+		driver.findElement(By.linkText("OrangeHRM, Inc")).click();
 		System.out.println();
 
 		Set<String> allWins = driver.getWindowHandles();
-
+		
 		for (String win : allWins)
 		{
 			System.out.println(win);
-
-			if (!(win.equals(mainWindow)))
-			{
-				driver.switchTo().window(win);  // switch to the given window
-			}
 		}
-
+		
+		System.out.println();
+		System.out.println("*** Using ArrayList ***");
+		System.out.println();
+		
+		ArrayList<String> allWinsList = new ArrayList<String>(allWins);
+		
+		System.out.println(allWinsList.get(0));
+		System.out.println(allWinsList.get(1));
+		System.out.println(allWinsList.get(2));
+		System.out.println(allWinsList.get(3));
+		
+		System.out.println();
+		driver.switchTo().window(allWinsList.get(2));
+		
 		String currentWin = driver.getWindowHandle();  // window handle of currently focused window
 		System.out.println("Switched to : "+currentWin);
 		

@@ -32,6 +32,8 @@ public class ArrayListDiscussion
 		list2.add("abc");
 		
 		System.out.println(list1);
+		
+		// get
 		System.out.println(list1.get(1));
 		// remove
 		
