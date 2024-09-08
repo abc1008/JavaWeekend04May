@@ -16,21 +16,21 @@ public class JSMethods
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://demoqa.com/droppable"); // url hit
+		driver.get("https://demoqa.com/automation-practice-form"); // url hit
 		Thread.sleep(4000);
 
-		WebElement drag = driver.findElement(By.xpath("//div[@id='draggable']"));
-		WebElement drop = driver.findElement(By.xpath("//div[@class='simple-drop-container']//div[@id='droppable']"));
+		WebElement radioBtn = driver.findElement(By.xpath("//input[@id='gender-radio-1']"));
 
 		//  scroll 
 		JavascriptExecutor js = (JavascriptExecutor) driver; // typecasting
-		js.executeScript("arguments[0].scrollIntoView();", drop);
+		js.executeScript("arguments[0].scrollIntoView();", radioBtn);
 		
-		
+		Thread.sleep(3000);
 		// Javascript Click - 
+		js.executeScript("arguments[0].click();", radioBtn);
 		
-//		js.executeScript("arguments[0].click();", WebElementToClick);
-		js.executeScript("arguments[0].click();", drop);
+		
+		
 		
 
 	}
