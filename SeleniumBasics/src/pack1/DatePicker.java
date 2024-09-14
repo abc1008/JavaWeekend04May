@@ -40,7 +40,24 @@ public class DatePicker
 		 
 		 
 		 
+			// Date picker 2
 		 
+		    System.out.println();
+		    System.out.println("********");
+			driver.findElement(By.xpath("//input[@id='datepicker2']")).click();
+			while (true)
+			{
+				WebElement monthhyear = driver.findElement(By.xpath("//select[@title='Change the month']//option[@selected]"));
+				String text = monthhyear.getText();
+				System.out.println(text);
+				if (text.equals("January"))
+				{
+					System.out.println("Found");
+					break;
+				}
+				driver.findElement(By.xpath("//a[@title='Show the previous month']")).click();
+			}
+
 		 
 		 
 

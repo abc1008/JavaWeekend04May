@@ -15,37 +15,38 @@ public class DropdownHandling
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.facebook.com/r.php?locale=en_GB&display=page"); // url hit
-		
+
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//select[@id='day']")).click();
 		List<WebElement> days = driver.findElements(By.xpath("//select[@id='day']//option"));
-		
-		for(WebElement day : days)
+
+		for (WebElement day : days)
 		{
-			     String dayText = day.getText();   // return the text from given webelement
+			String dayText = day.getText(); // return the text from given webelement
 //			     System.out.println(dayText);
-			     
-			     if(dayText.equals("15"))
-			     {
-			    	 day.click();
-			    	 break;
-			     }
+
+			if (dayText.equals("15"))
+			{
+				day.click();
+				break;
+			}
 		}
-		
-		
-		
-		 WebElement monthDropdown = driver.findElement(By.id("month"));
-		
-		 Select sel = new Select(monthDropdown);
-		 
+
+		WebElement monthDropdown = driver.findElement(By.id("month"));
+
+		Select sel = new Select(monthDropdown);
+
 //		 sel.selectByIndex(4);   
 //		 sel.selectByValue("6");
-		 sel.selectByVisibleText("Nov");
-		 
-		 String selectedOption = sel.getFirstSelectedOption().getText();  // to get the text from selected option
-		 System.out.println(selectedOption);
-		
-		
+		sel.selectByVisibleText("Nov");
+
+		String selectedOption = sel.getFirstSelectedOption().getText(); // to get the text from selected option
+		System.out.println(selectedOption);
+
+//		 Datepicker 2
+
+
+
 	}
 
 }
