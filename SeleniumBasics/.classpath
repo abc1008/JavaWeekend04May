@@ -137,5 +137,6 @@
 	<classpathentry kind="lib" path="D:/Trainings/TESTOMETER/Seleniun_JAVA_04May24_WEEKEND/Selenium Files/poi-bin-5.2.3-20220909/poi-bin-5.2.3/auxiliary/xml-apis-ext-1.3.04.jar"/>
 	<classpathentry kind="lib" path="D:/Trainings/TESTOMETER/Seleniun_JAVA_04May24_WEEKEND/Selenium Files/poi-bin-5.2.3-20220909/poi-bin-5.2.3/auxiliary/xmlgraphics-commons-2.6.jar"/>
 	<classpathentry kind="lib" path="D:/Trainings/TESTOMETER/Seleniun_JAVA_04May24_WEEKEND/Selenium Files/poi-bin-5.2.3-20220909/poi-bin-5.2.3/auxiliary/xmlsec-3.0.0.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
