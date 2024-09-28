@@ -88,5 +88,11 @@
 	<classpathentry kind="lib" path="D:/Trainings/TESTOMETER/Seleniun_JAVA_04May24_WEEKEND/Selenium Files/selenium-java-4.23.0/selenium-support-4.23.0.jar"/>
 	<classpathentry kind="lib" path="D:/Trainings/TESTOMETER/Seleniun_JAVA_04May24_WEEKEND/Selenium Files/selenium-java-4.23.0/selenium-support-4.23.0-sources.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Trainings/TESTOMETER/Seleniun_JAVA_04May24_WEEKEND/Selenium Files/jar_files/extentreports-5.1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Trainings/TESTOMETER/Seleniun_JAVA_04May24_WEEKEND/Selenium Files/jar_files/freemarker-2.3.32.jar"/>
+	<classpathentry kind="lib" path="D:/Trainings/TESTOMETER/Seleniun_JAVA_04May24_WEEKEND/Selenium Files/jar_files/gson-2.10.1.jar"/>
+	<classpathentry kind="lib" path="D:/Trainings/TESTOMETER/Seleniun_JAVA_04May24_WEEKEND/Selenium Files/jar_files/lombok-1.18.26.jar"/>
+	<classpathentry kind="lib" path="D:/Trainings/TESTOMETER/Seleniun_JAVA_04May24_WEEKEND/Selenium Files/jar_files/reactive-streams-1.0.4.jar"/>
+	<classpathentry kind="lib" path="D:/Trainings/TESTOMETER/Seleniun_JAVA_04May24_WEEKEND/Selenium Files/jar_files/rxjava-3.1.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,9 +1,13 @@
 package pom_pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import utility.ConfigReader;
 
 public class LoginPage
 {
@@ -37,10 +41,10 @@ public class LoginPage
 	
 	
 	// methods
-	public void login()
+	public void login() throws IOException
 	{
-		textBoxUserId.sendKeys("Admin");
-		textBoxPassword.sendKeys("admin123");
+		textBoxUserId.sendKeys(ConfigReader.readData("UserID"));
+		textBoxPassword.sendKeys(ConfigReader.readData("Password"));
 		buttonLogin.click();
 	}
 	

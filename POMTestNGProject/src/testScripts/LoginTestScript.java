@@ -1,11 +1,13 @@
 package testScripts;
+import java.io.IOException;
+
 import basePack.BaseClass;
 import pom_pages.LoginPage;
 
 
 public class LoginTestScript extends BaseClass
 {
-	public void performLogin()
+	public void performLogin() throws IOException
 	{
 		LoginPage lp = new LoginPage(driver);
 		lp.login();

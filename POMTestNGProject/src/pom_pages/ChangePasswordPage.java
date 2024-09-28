@@ -46,28 +46,34 @@ public class ChangePasswordPage
 		PageFactory.initElements(driver, this);    // refer non-static variables of current class
 	}
 	
-	
-	// methods
-	public void changePassword()
+	public boolean changePassword()
 	{
-		buttonProfileIcon.click();
-		buttonChangePassword.click();
-		textBoxCurrentPassword.sendKeys("admin123");
-		textBoxNewPassword.sendKeys("admin123");
-		textBoxConfirmPassword.sendKeys("admin123");
+		boolean testResult = false;
 		
-		buttonSave.click();
-		
-		if(msgSuccess.size() > 0)
+		try
 		{
-			System.out.println("Test Case Pass");
+			buttonProfileIcon.click();
+			buttonChangePassword.click();
+			textBoxCurrentPassword.sendKeys("admin123");
+			textBoxNewPassword.sendKeys("admin123");
+			textBoxConfirmPassword.sendKeys("admin123");
+			
+			buttonSave.click();
+			
+			if(msgSuccess.size() > 0)
+			{
+				System.out.println("Password changed successfully.");
+				testResult = true;
+			}
+			else
+				System.out.println("Unable to locate the toaster message.");
 		}
-		else
+		catch (Exception ex) 
 		{
-			System.out.println("Unable to locate the toaster message.");
+			System.out.println("Exception in method 'changePassword' : "+ ex.getMessage());
+			return false;
 		}
-		
-		
+		return testResult;
 	}
 
 	
