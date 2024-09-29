@@ -1,12 +1,15 @@
 package testScripts;
 
+import java.io.IOException;
+
 import basePack.BaseClass;
 import orangeHRMObjects.OrangeHRMApp;
 import pom_pages.ChangePasswordPage;
+import utility.ExtentReportHelper;
 
 public class ChangePasswordTestScript extends BaseClass
 {
-	public boolean performChangePassword()
+	public boolean performChangePassword() throws IOException
 	{
 		boolean testResult = false;
 
@@ -14,13 +17,16 @@ public class ChangePasswordTestScript extends BaseClass
 		{
 			if (OrangeHRMApp.changePasswordPage().changePassword() == true)
 			{
-				System.out.println("Test Script Pass");
+				ExtentReportHelper.logPass("Test Script Pass");
 				testResult = true;
-			} else
-				System.out.println("Test Script Fail.");
-		} catch (Exception ex)
+			} 
+			else
+				ExtentReportHelper.logFail("Test Script Fail.");
+
+		} 
+		catch (Exception ex)
 		{
-			System.out.println("Exception in method 'performChangePassword' : " + ex.getMessage());
+			ExtentReportHelper.logFail("Exception in method 'performChangePassword' : " + ex.getMessage());
 			return false;
 		}
 		return testResult;

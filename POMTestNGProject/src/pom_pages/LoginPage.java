@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utility.ConfigReader;
+import utility.ExtentReportHelper;
 
 public class LoginPage
 {
@@ -43,16 +44,23 @@ public class LoginPage
 	// methods
 	public void login() throws IOException
 	{
+		ExtentReportHelper.logInfo("Performin Login.");
+		
 		textBoxUserId.sendKeys(ConfigReader.readData("UserID"));
+		ExtentReportHelper.logInfo("Entered User ID.");
 		textBoxPassword.sendKeys(ConfigReader.readData("Password"));
+		ExtentReportHelper.logInfo("Entered User Password.");
 		buttonLogin.click();
+		ExtentReportHelper.logInfo("Clicked on Login button.");
 	}
 	
 	
 	public void logout()
 	{
 		buttonProfileIcon.click();
+		ExtentReportHelper.logInfo("Clicked on Profile icon for logout.");
 		buttonLogout.click();
+		ExtentReportHelper.logInfo("Selected Logout option from profile icon menu.");
 	}
 	
 	

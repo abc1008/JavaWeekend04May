@@ -2,6 +2,8 @@ package basePack;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,14 +15,22 @@ import org.testng.annotations.BeforeSuite;
 
 import testScripts.LoginTestScript;
 import utility.ConfigReader;
+import utility.ExtentReportHelper;
 
 public class BaseClass
 {
 	public static WebDriver driver;
+	public static String dateTimeStamp;
 	
 	@BeforeSuite
 	public void inItDriver() throws IOException
 	{
+		
+		LocalDateTime time = LocalDateTime.now();
+		DateTimeFormatter format = DateTimeFormatter.ofPattern("ddMMyyyy_HH_mm_ss"); 
+		dateTimeStamp = time.format(format);
+		
+		
 		String browserName = ConfigReader.readData("BrowserType");
 		
 		if(browserName.equals("CHROME"))
@@ -33,14 +43,15 @@ public class BaseClass
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // implicit wait
 		driver.manage().window().maximize();
 		driver.get(ConfigReader.readData("TestSiteUrl")); // url hit
+		
+		ExtentReportHelper extentReportHelper = new  ExtentReportHelper();
 	}
 	
-	@BeforeMethod
-	public void login() throws IOException
-	{
-		LoginTestScript loginTestScript = new LoginTestScript();
-		loginTestScript.performLogin();
-	}
+//	@BeforeMethod
+//	public void login() throws IOException
+//	{
+//
+//	}
 	
 	@AfterMethod
 	public void logout() throws InterruptedException
@@ -54,6 +65,7 @@ public class BaseClass
 	@AfterSuite
 	public void closeBrowser()
 	{
+		ExtentReportHelper.endTest();
 		driver.quit();
 	}
 

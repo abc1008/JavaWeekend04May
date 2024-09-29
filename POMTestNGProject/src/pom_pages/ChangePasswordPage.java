@@ -1,5 +1,6 @@
 package pom_pages;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -7,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+
+import utility.ExtentReportHelper;
 
 public class ChangePasswordPage
 {
@@ -16,7 +19,7 @@ public class ChangePasswordPage
 	private final String textBoxNewPasswordByXpath = "(//input[@type='password'])[2]";
 	private final String textBoxConfirmPasswordByXpath = "(//input[@type='password'])[3]";
 	private final String buttonSaveByXpath = "//button[text()=' Save ']";
-	private final String msgSuccessByXpath = "//div[@id='oxd-toaster_1']//div//p[contains(@class,'toast-title')]";
+	private final String msgSuccessByXpath = "//div[@id='oxd-toaster_1']//div//p[contains(@class,'toast-titlett')]";
 	
 	@FindBy(xpath = buttonProfileIconByXpath) 
 	private WebElement buttonProfileIcon;
@@ -46,31 +49,37 @@ public class ChangePasswordPage
 		PageFactory.initElements(driver, this);    // refer non-static variables of current class
 	}
 	
-	public boolean changePassword()
+	public boolean changePassword() throws IOException
 	{
 		boolean testResult = false;
 		
 		try
 		{
 			buttonProfileIcon.click();
+			ExtentReportHelper.logInfo("Clicked on profile icon.");
 			buttonChangePassword.click();
+			ExtentReportHelper.logInfo("Selected 'Change Password' option from profile icon.");
 			textBoxCurrentPassword.sendKeys("admin123");
+			ExtentReportHelper.logInfo("Entered Current Password.");
 			textBoxNewPassword.sendKeys("admin123");
+			ExtentReportHelper.logInfo("Entered New Password.");
 			textBoxConfirmPassword.sendKeys("admin123");
+			ExtentReportHelper.logInfo("Entered Confirm Password.");
 			
 			buttonSave.click();
+			ExtentReportHelper.logInfo("Clicked Save button.");
 			
 			if(msgSuccess.size() > 0)
 			{
-				System.out.println("Password changed successfully.");
+				ExtentReportHelper.logPass("Password changed successfully.");
 				testResult = true;
 			}
 			else
-				System.out.println("Unable to locate the toaster message.");
+				ExtentReportHelper.logFail("Unable to locate the toaster message.");
 		}
 		catch (Exception ex) 
 		{
-			System.out.println("Exception in method 'changePassword' : "+ ex.getMessage());
+			ExtentReportHelper.logFail("Exception in method 'changePassword' : "+ ex.getMessage());
 			return false;
 		}
 		return testResult;

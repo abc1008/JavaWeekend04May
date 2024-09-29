@@ -5,7 +5,6 @@
     <classes>
       <class name="testSuites.ChangePasswordTestSuite">
         <methods>
-          <include name="login"/>
           <include name="inItDriver"/>
           <include name="tc123_ChnagePasswordTest"/>
           <include name="closeBrowser"/>

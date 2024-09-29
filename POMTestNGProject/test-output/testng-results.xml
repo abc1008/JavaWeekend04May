@@ -2,20 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-28T10:18:27 IST" name="Default suite" finished-at="2024-09-28T10:18:47 IST" duration-ms="19267">
+  <suite started-at="2024-09-29T10:25:34 IST" name="Default suite" finished-at="2024-09-29T10:25:52 IST" duration-ms="18610">
     <groups>
     </groups>
-    <test started-at="2024-09-28T10:18:27 IST" name="Default test" finished-at="2024-09-28T10:18:47 IST" duration-ms="19267">
+    <test started-at="2024-09-29T10:25:34 IST" name="Default test" finished-at="2024-09-29T10:25:52 IST" duration-ms="18610">
       <class name="testSuites.ChangePasswordTestSuite">
-        <test-method is-config="true" signature="inItDriver()[pri:0, instance:testSuites.ChangePasswordTestSuite@123ef382]" started-at="2024-09-28T10:18:20 IST" name="inItDriver" finished-at="2024-09-28T10:18:27 IST" duration-ms="7857" status="PASS">
+        <test-method is-config="true" signature="inItDriver()[pri:0, instance:testSuites.ChangePasswordTestSuite@62150f9e]" started-at="2024-09-29T10:25:27 IST" name="inItDriver" finished-at="2024-09-29T10:25:34 IST" duration-ms="6852" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inItDriver -->
-        <test-method is-config="true" signature="login()[pri:0, instance:testSuites.ChangePasswordTestSuite@123ef382]" started-at="2024-09-28T10:18:28 IST" name="login" finished-at="2024-09-28T10:18:29 IST" duration-ms="1174" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="tc123_ChnagePasswordTest()[pri:0, instance:testSuites.ChangePasswordTestSuite@123ef382]" started-at="2024-09-28T10:18:29 IST" name="tc123_ChnagePasswordTest" finished-at="2024-09-28T10:18:42 IST" duration-ms="13763" status="FAIL">
+        <test-method signature="tc123_ChnagePasswordTest()[pri:0, instance:testSuites.ChangePasswordTestSuite@62150f9e]" started-at="2024-09-29T10:25:34 IST" name="tc123_ChnagePasswordTest" finished-at="2024-09-29T10:25:49 IST" duration-ms="14730" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -26,7 +22,7 @@ at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertTrue(Assert.java:45)
 at org.testng.Assert.assertTrue(Assert.java:55)
-at testSuites.ChangePasswordTestSuite.tc123_ChnagePasswordTest(ChangePasswordTestSuite.java:13)
+at testSuites.ChangePasswordTestSuite.tc123_ChnagePasswordTest(ChangePasswordTestSuite.java:17)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -61,11 +57,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc123_ChnagePasswordTest -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:testSuites.ChangePasswordTestSuite@123ef382]" started-at="2024-09-28T10:18:42 IST" name="logout" finished-at="2024-09-28T10:18:47 IST" duration-ms="4270" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:testSuites.ChangePasswordTestSuite@62150f9e]" started-at="2024-09-29T10:25:49 IST" name="logout" finished-at="2024-09-29T10:25:52 IST" duration-ms="3841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testSuites.ChangePasswordTestSuite@123ef382]" started-at="2024-09-28T10:18:47 IST" name="closeBrowser" finished-at="2024-09-28T10:18:48 IST" duration-ms="1388" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testSuites.ChangePasswordTestSuite@62150f9e]" started-at="2024-09-29T10:25:52 IST" name="closeBrowser" finished-at="2024-09-29T10:25:54 IST" duration-ms="2018" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
