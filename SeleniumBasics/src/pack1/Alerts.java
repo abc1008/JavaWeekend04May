@@ -1,5 +1,8 @@
 package pack1;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Alerts
 {
 
-	public static void main(String[] args) throws InterruptedException
+	public static void main(String[] args) throws InterruptedException, AWTException
 	{
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
