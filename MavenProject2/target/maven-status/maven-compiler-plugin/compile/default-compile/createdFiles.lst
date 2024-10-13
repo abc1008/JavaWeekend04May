@@ -1,0 +1,6 @@
+utility\CaptureScreen.class
+utility\JSMethods.class
+pom_pages\LoginPage.class
+utility\ConfigReader.class
+utility\ExtentReportHelper.class
+pom_pages\ChangePasswordPage.class

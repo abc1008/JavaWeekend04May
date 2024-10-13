@@ -1,0 +1,7 @@
+testSuites\ChangePasswordTestSuite.class
+testScripts\ChangePasswordTestScript.class
+testScripts\LoginTestScript.class
+basePack\ListenerClass.class
+testSuites\LoginTestSuite.class
+orangeHRMObjects\OrangeHRMApp.class
+basePack\BaseClass.class
