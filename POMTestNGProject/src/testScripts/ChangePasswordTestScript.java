@@ -12,7 +12,7 @@ public class ChangePasswordTestScript extends BaseClass
 	public boolean performChangePassword() throws IOException
 	{
 		boolean testResult = false;
-
+		
 		try
 		{
 			if (OrangeHRMApp.changePasswordPage().changePassword() == true)
