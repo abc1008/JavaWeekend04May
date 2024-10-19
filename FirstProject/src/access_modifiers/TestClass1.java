@@ -6,6 +6,8 @@ public class TestClass1
 	private int b = 90;
 	int c  = 800;  // default
 	
+	System.out.println("Git Pull Test");
+	
 	public void m1()
 	{
 		System.out.println("public m1 method of TestClass1");
